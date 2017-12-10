@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <title>Hello World</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <style type="text/css">
+            .block_dashboard{
+                text-align: center;
+                height:200px;
+                color:#fff;
+                background-color:#2196f3;
+                font-weight:200;
+                font-family:'Helvetica',sans-serif;
+                padding-top:30px;
+                margin-bottom:20px;
+            }
+            .block_dashboard h1{
+                font-size:30px;
+            }
+            a{
+                text-decoration:none;
+                outline:none;
+            }
+        </style>
+    </head>
+    <body>
+    <body ng-app="toolMainApp">
+    <div class="header" ng-controller="HeaderController as head">
+        <div class="container">
+            <h1><i class="fa fa-check-square-o"></i> {{head.appTitle}}</h1>
+        </div>  
+    </div>
+    <div class="container">            
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-12">
+                <a href="/todo-app/index.html">
+                    <div class="block_dashboard">
+                        <i class="fa fa-check fa-2x"></i>
+                        <h3>Task Manager</h3>
+                    </div>
+                </a>
+            </div>                
+             <div class="col-md-4 col-sm-12 col-xs-12">
+                <a href="/cloack-app/index.html">
+                    <div class="block_dashboard">
+                        <i class="fa fa-history fa-2x"></i>
+                        <h3>Cloack Timer</h3>
+                    </div>
+                </a>
+            </div>     
+             <div class="col-md-4 col-sm-12 col-xs-12">
+                <a href="contact-app/index.html">
+                    <div class="block_dashboard">
+                        <i class="fa fa-phone fa-2x"></i>
+                        <h3>Contact App</h3>
+                    </div>
+                </a>
+            </div>     
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container" ng-controller="FooterController as foot">    
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h1><i class="fa fa-phone"></i> {{foot.appTitle}}</h1>
+                    <hr>
+                    <p>
+                        {{foot.textFooter}}
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <h4>Social</h4>
+                    <p class="social_block">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-linkedin"></i>
+                        <i class="fa fa-pinterest"></i>
+                        <i class="fa fa-tumblr"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+    <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
